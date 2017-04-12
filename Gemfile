@@ -13,7 +13,6 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug', platform: :mri
 end
 group :development do
@@ -40,6 +39,10 @@ group :development do
   gem 'html2haml'
   gem 'rails_layout'
 end
+
+group :development do
+  gem 'sqlite3'
+end  
 
 group :production do
   gem 'pg'
