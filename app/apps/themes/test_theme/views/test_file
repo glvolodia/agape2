@@ -1,0 +1,6 @@
+                <%= @post.the_title %>
+                <%= raw @post.the_content %>
+
+<img src="<%= @post.the_thumb_url(theme_asset_url('img/img-news.jpg')) %>" alt=" " class="img-responsive" />
+
+

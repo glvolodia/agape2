@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META SECTION -->
+    <title><%= current_site.the_title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- END META SECTION -->
+
+    <%= stylesheet_link_tag theme_asset_path("css/main") %>
+    <%= javascript_include_tag theme_asset_path("js/main.js") %>
+    <%= raw the_head %>
+</head>
+<body class="innerPage">
+
+<!--           
+            <div class="navbar navbar-primary">
+                <div class="navbar-header">
+                    <a id="logo" class="navbar-brand" href="<%= current_site.the_url %>"><%= image_tag current_site.the_logo, class: "img-responsive" %></a>
+                     <button data-target="#navbar-main" data-toggle="collapse" type="button" class="navbar-toggle"> 
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar-main" class="navbar-collapse collapse">
+                    <%= raw get_nav_menu('main_menu', 'nav navbar-nav ') %>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <% if signin?  %>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="<%= cama_current_user.decorate.the_avatar %>" style="max-width: 24px; border-radius: 50%" alt=""/> <%= cama_current_user.username %></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<%= cama_admin_dashboard_path %>">Dashboard</a></li>
+                                    <li><a href="<%= cama_admin_profile_path %>">Profile</a></li>
+                                    <li><a href="<%= cama_admin_logout_path %>">Logout</a></li>
+                                </ul>
+                            </li>
+                        <% else %>
+                            <li class="dropdown">
+                                <a id="login-user" class="dropdown-toggle" data-toggle="dropdown" href="#">Login / Register</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<%= cama_admin_login_path %>">Login</a></li>
+                                    <li><a href="<%= cama_admin_register_path %>">Register</a></li>
+                                </ul>
+                            </li>
+                        <% end %>
+                    </ul>
+                    <%= raw current_site.draw_languages("language list-inline pull-right", true) %>
+                </div>
+            </div>
+-->          
+          
+                
+  <div class="wrap">
+    <div class="overlay"></div>
+    <header class="header-inner">
+      <div class="topInfo">
+        <div href="#" class="logo--innerPage">
+          <a href="#" class="logo-opacity"></a>
+        </div>
+        <div class="topSlider center-block">
+          <h2 class="topSlider__ttl">Християнська церква "АГАПА"</h2>
+          <div id="sliderTop" class="topSlider__slider">
+            <article class="clearfix">
+              <p>Споконвіку було Слово, і з Богом було Слово, і Слово було - Бог. 3 Богом було воно споконвіку. 3 Ним повстало все, і ніщо, що повстало, не повстало без нього. У ньому було життя, і життя було світло людей.
+              </p>
+              <div class="clearfix"></div>
+              <span class="pull-right text-uppercase">Ів. 1:1-4</span>
+            </article>
+            <article class="clearfix">
+              <p>Споконвіку було Слово, і з Богом було Слово, і Слово було - Бог. 3 Богом було воно споконвіку. 3 Ним повстало все, і ніщо, що повстало, не повстало без нього. У ньому було життя, і життя було світло людей.
+              </p>
+              <div class="clearfix"></div>
+              <span class="pull-right text-uppercase">Ів. 1:1-4</span>
+            </article>
+            <article class="clearfix">
+              <p>Споконвіку було Слово, і з Богом було Слово, і Слово було - Бог. 3 Богом було воно споконвіку. 3 Ним повстало все, і ніщо, що повстало, не повстало без нього. У ньому було життя, і життя було світло людей.
+              </p>
+              <div class="clearfix"></div>
+              <span class="pull-right text-uppercase">Ів. 1:1-4</span>
+            </article>
+          </div>
+        </div>
+      </div>
+      <nav class="hidden">
+        <div class="container">
+          <ul class="list-inline list-unstyled text-uppercase">
+            <li><a class="active" href="#">новини</a></li>
+            <li><a href="#">медіатека</a></li>
+            <li><a href="#">як знайти бога</a></li>
+            <li><a href="#">пастор</a></li>
+            <li><a href="#">Про церкву</a></li>
+            <li><a href="#">Служіння</a></li>
+            <li><a href="#">Партнерство</a></li>
+            <li><a href="#">Форум</a></li>
+            <li><a href="#">Контакти</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar navbar-default header-inner__nav">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <%= raw get_nav_menu('test_menu', 'nav navbar-nav text-uppercase') %>
+<!--            
+            <ul class="nav navbar-nav text-uppercase">
+              <li class="active"><a class="active" href="#">новини</a></li>
+              <li><a href="#">медіатека</a></li>
+              <li><a href="#">як знайти бога</a></li>
+              <li><a href="#">пастор</a></li>
+              <li><a href="#">Про церкву</a></li>
+              <li><a href="#">Служіння</a></li>
+              <li><a href="#">Партнерство</a></li>
+              <li><a href="#">Форум</a></li>
+              <li><a href="#">Контакти</a></li>
+            </ul>
+-->              
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+    </header>
+<!--
+    <main class="lines main-content-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-3 left-col-menu">
+            <nav class="menu">
+              <ul class="list-unstyled">
+                <li class="active text-uppercase"><a class=" " href="#">новини</a></li>
+                <li><a class="" href="#">Новини церкви</a></li>
+                <li><a class="" href="#">Календар подій</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-6 center-col">
+            <div class="b-news">
+              <h1 class="b-news__ttl">Мовлення як вид людської діяльності зорієнтоване на виконання певного комунікативного завдання</h1>
+              <span class="b-news__date">
+                13.08.2016 | 14:14 
+              </span>
+              <div class="imgBlock">
+                <img src="assets/img/temp/img-news.jpg" alt="">
+              </div>
+              <article>
+                <p>Мовлення як вид людської діяльності завжди зорієнтоване на виконання певного комунікативного завдання. Висловлюючи думки і почуття, людина ставить конкретну мету — щось повідомити, про щось переконати тощо. Існує багато визначень тексту. Наведемо окремі з них.</p>
+                <p>«Текст — це витвір мовленнєвого процесу, що відзначається завершеністю, об'єктивований у вигляді письмового документа, літературно опрацьований відповідно до типу документа, витвір, який складається із заголовка і ряду особливих одиниць (надфразових єдностей), об'єднаних різними типами лексичного, граматичного, логічного, стилістичного зв'язку, і має певну цілеспрямованість і прагматичну визначеність»[1] (І. Р. Гальперін)(рос.).</p>
+                <p>«Текст — певна, з функціонально-смислового погляду упорядкована, група речень або їх аналогів, які являють собою, завдяки семантичним і функціональним взаємовідношенням елементів, завершену смислову єдність»[Джерело?] (В. В. Одинцов).</p>
+              </article>
+
+              <form class="b-news__form-comment" action="">
+                <div class="comment">
+                  <div class="form-group">
+                    <input class="form-control" type="text" value="Ваше ім'я">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="email" placeholder="Ваш e-mail" value="">
+                  </div>
+                  <div class="form-group">
+                    <textarea name="" id="" cols="" rows="6" class="form-control">Текст повідомлення</textarea>
+                  </div>
+                  <div class="form-group">
+                    <a href="#" class="btn btn-default pull-right">Надіслати</a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-3 right-inner-col">
+            <div class="b-other-news">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="b-other-news__link clearfix">
+                    <span class="b-other-news__link--image">
+                      <img src="assets/img/temp/small_img1.jpg" alt="">
+                    </span>
+                    <span class="b-other-news__link--text">
+                      <b class="b-other-news__link--date">
+                        25.07.2016
+                      </b>
+                      <span>
+                       Кожен компонент тексту характеризується відносною смисловою завершеністю.
+                      </span>
+
+                    </span>
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="b-other-news__link clearfix">
+                    <span class="b-other-news__link--image">
+                      <img src="assets/img/temp/small_img2.jpg" alt="">
+                    </span>
+                    <span class="b-other-news__link--text">
+                      <b class="b-other-news__link--date">
+                        24.07.2016
+                      </b>
+                      <span>
+                        Цілісність тексту пізнається через його взаємозв'язані категорії — категорію членованості.
+                      </span>
+                    </span>
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="b-other-news__link clearfix">
+                    <span class="b-other-news__link--image">
+                      <img src="assets/img/temp/small_img3.jpg" alt="">
+                    </span>
+                    <span class="b-other-news__link--text">
+                      <b class="b-other-news__link--date">
+                        05.06.2016
+                      </b>
+                      <span>
+                        Цілісність тексту пізнається через його взаємозв'язані категорії смисловою завершеністю.
+                      </span>
+                    </span>
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="b-other-news__link clearfix">
+                    <span class="b-other-news__link--image">
+                      <img src="assets/img/temp/small_img1.jpg" alt="">
+                    </span>
+                    <span class="b-other-news__link--text">
+                      <b class="b-other-news__link--date">
+                        25.07.2016
+                      </b>
+                      <span>
+                       Кожен компонент тексту характеризується відносною смисловою завершеністю.
+                      </span>
+
+                    </span>
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="b-other-news__link clearfix">
+                    <span class="b-other-news__link--image">
+                      <img src="assets/img/temp/small_img2.jpg" alt="">
+                    </span>
+                    <span class="b-other-news__link--text">
+                      <b class="b-other-news__link--date">
+                        24.07.2016
+                      </b>
+                      <span>
+                        Цілісність тексту пізнається через його взаємозв'язані категорії — категорію членованості.
+                      </span>
+                    </span>
+
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="b-other-news__link clearfix">
+                    <span class="b-other-news__link--image">
+                      <img src="assets/img/temp/small_img3.jpg" alt="">
+                    </span>
+                    <span class="b-other-news__link--text">
+                      <b class="b-other-news__link--date">
+                        05.06.2016
+                      </b>
+                      <span>
+                        Цілісність тексту пізнається через його взаємозв'язані категорії смисловою завершеністю.
+                      </span>
+                    </span>
+
+                  </a>
+                </li>
+
+              </ul>
+              <nav class="text-center" aria-label="Page navigation">
+                <ul class="pagination   ">
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">...</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                  <li><a href="#">11</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+--> 
+    <div class="container inner_container">
+        <%= yield %>
+    </div> 
+
+    </main>
+    <footer class="inner-footer">
+      <div class="socialLink text-center">
+        <ul class="list-inline list-unstyled text-center">
+            <li><a href="#" class="play"></a></li>
+            <li><a href="#" class="fb"></a></li>
+            <li><a href="#" class="vk"></a></li>
+            <li><a href="#" class="tw"></a></li>
+        </ul>
+        <p>2016 Церква “Агапа”</p>
+      </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META SECTION -->
+    <title><%= current_site.the_title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- END META SECTION -->
+
+    <%= stylesheet_link_tag theme_asset_path("css/main") %>
+    <%= javascript_include_tag theme_asset_path("js/main.js") %>
+    <%= raw the_head %>
+</head>
+<body>
+    <div class="wrap">
+    <!-- container -->
+        <div class="container"> 
+            <!-- header -->
+            
+            <div class="navbar navbar-primary">
+                <div class="navbar-header">
+<!--                    <a id="logo" class="navbar-brand" href="<%= current_site.the_url %>"><%= image_tag current_site.the_logo, class: "img-responsive" %></a>
+                    <button data-target="#navbar-main" data-toggle="collapse" type="button" class="navbar-toggle"> 
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar-main" class="navbar-collapse collapse">
+                    <%= raw get_nav_menu('main_menu', 'nav navbar-nav ') %>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <% if signin?  %>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="<%= cama_current_user.decorate.the_avatar %>" style="max-width: 24px; border-radius: 50%" alt=""/> <%= cama_current_user.username %></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<%= cama_admin_dashboard_path %>">Dashboard</a></li>
+                                    <li><a href="<%= cama_admin_profile_path %>">Profile</a></li>
+                                    <li><a href="<%= cama_admin_logout_path %>">Logout</a></li>
+                                </ul>
+                            </li>
+                        <% else %>
+                            <li class="dropdown">
+                                <a id="login-user" class="dropdown-toggle" data-toggle="dropdown" href="#">Login / Register</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<%= cama_admin_login_path %>">Login</a></li>
+                                    <li><a href="<%= cama_admin_register_path %>">Register</a></li>
+                                </ul>
+                            </li>
+                        <% end %>
+                    </ul>
+                    <%= raw current_site.draw_languages("language list-inline pull-right", true) %>
+                </div>
+            </div>
+-->
+
+            <div class="overlay"></div>
+              <header>
+                <h1 class="mainTitle clearfix">
+                  <span class="left">Тож немає тепер жадного осуду тим, хто</span>
+                  <span class="right">ходить у Христі Ісусі не за тілом, а за духом</span>
+                  <a href="#" class="logo"></a>
+                </h1>
+
+                <nav class="mainNav">
+                  <div class="container">
+                    <div class="row templatemorow top_menu">
+                      <div class="hex hex-1 col-sm-6 empty">
+                        <div>
+                          <div class="hexagon hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2" style="">
+                                <div class="overlay" style="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hex hex-1 col-sm-6 mobile-1">
+                        <div>
+                          <div class="hexagon withContent hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2 shadow  findGod">
+                                <p class="innerHex"><span>як знайти
+                                  бога</span></p>
+                                <div class="overlay"></div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hex hex-1 col-sm-6 mobile-2">
+                        <div>
+                          <div class="hexagon withContent hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2 shadow partnership">
+                                <p class="innerHex"><span>Партнер<br>ство</span></p>
+                                <div class="overlay"></div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="firstLevel rightAlign">
+                          <li><a href="">Партнерство</a></li>
+                          <li><a href="/partnerstvo/pozhertvuvannja-ta-pidtrymka.html">Пожертвування <br>
+                            та підтримка</a></li>
+                        </ul>
+
+                      </div>
+                      <div class="hex hex-1 col-sm-6 empty">
+                        <div>
+                          <div class="hexagon hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2">
+                                <div class="overlay">
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hex hex-2 col-sm-6 empty">
+                        <div>
+                          <div class="hexagon hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2" >
+                                <div class="overlay">
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hex hex-2 col-sm-6 mobile-3">
+                        <div>
+                          <div class="hexagon withContent hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2 shadow news">
+                                <p class="innerHex"><span>новини</span></p>
+                                <div class="overlay"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul>
+                          <li><a href="/category/120-novyny-tserkvy.html">Новини церкви</a></li>
+                          <li><a href="/category/121-kalendar-podiy.html">Календар подій</a></li>
+                        </ul>
+                      </div>
+                      <div class="hex hex-2 col-sm-6 mobile-4">
+                        <div>
+                          <div class="hexagon withContent hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2 shadow about">
+                                <p class="innerHex"><span>Про церкву</span></p>
+                                <div class="overlay"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul>
+                          <li><a href="/pro-tserkvu/virovchennja.html">Віровчення</a></li>
+                          <li><a href="/pro-tserkvu/istorija-tserkvy-agapa.html">Історія церкви “Агапа”</a></li>
+                          <li><a href="/pro-tserkvu/komanda.html">Команда</a></li>
+                          <li><a href="/pro-tserkvu/administruvannja.html">Адміністрування</a></li>
+                        </ul>
+                      </div>
+                      <div class="hex hex-2 col-sm-6 mobile-5">
+                        <div>
+                          <div class="hexagon withContent hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2 shadow contacts">
+                                <a href="#" class="innerHex"><span>Контакти</span></a>
+                                <div class="overlay"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hex hex-2 col-sm-6 empty">
+                        <div>
+                          <div class="hexagon hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2">
+                                <div class="overlay">
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hex hex-1 hex-3 col-sm-6 empty">
+                        <div>
+                          <div class="hexagon hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2">
+                                <div class="overlay">
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hex hex-1 hex-3 col-sm-6 mobile-6">
+                        <div>
+                          <div class="hexagon withContent hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2 shadow pastor">
+                                <p class="innerHex"><span>пастор</span></p>
+                                <div class="overlay" ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="thirdLevel rightAlign">
+                          <li><a href="/pastor/pastorske-zvernennja.html">Пасторське звернення</a></li>
+                          <li><a href="/pastor/bachennja-strategija.html">Бачення, Стратеія</a></li>
+                          <li><a href="/pastor/osobyste-svidchennja.html">Особисте свідчення</a></li>
+                          <li><a href="/pastor/pastorski-materialy.html">Пасторські матеріали</a></li>
+                          <li><a href="/pastor/simya.html">Сім'я</a></li>
+                          <li><a href="">Контакти</a></li>
+                        </ul>
+                      </div>
+                      <div class="hex hex-1 hex-3 col-sm-6  mobile-7">
+                        <div>
+                          <div class="hexagon withContent hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2 shadow forum">
+                                <p class="innerHex"><span>Форум</span></p>
+                                <div class="overlay"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="thirdLevel rightAlign">
+                          <li><a href="/forum/online-pidtrymka.html">Online підтримка</a></li>
+                          <li><a href="/forum/zapytannja-ta-potreby.html">Запитання та потреби</a></li>
+                          <li><a href="/forum/vashe-svidchennja.html">Ваше свідчення</a></li>
+                        </ul>
+                      </div>
+                      <div class="hex hex-1 hex-3 col-sm-6  empty">
+                        <div>
+                          <div class="hexagon hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2">
+                                <div class="overlay">
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hex hex-2 col-sm-6 invisible empty">
+                        <div>
+                          <div class="hexagon hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2">
+                                <div class="overlay">
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hex hex-2 col-sm-6 mobile-8">
+                        <div>
+                          <div class="hexagon withContent hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2 shadow media">
+                                <p class="innerHex"><span>медіатека</span></p>
+                                <div class="overlay "></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="fourthLevel thirdLevel">
+                          <li><a href="/mediateka/propovidi.html">Проповіді</a></li>
+                          <li><a href="/mediateka/biblioteka.html">Бібліотека</a></li>
+                          <li><a href="/mediateka/prorochiy-buleten.html">Пророчий бюлетень</a></li>
+                          <li><a href="">Пасторські матеріали</a></li>
+                          <li><a href="/mediateka/svidchennja.html">Свідчення</a></li>
+                        </ul>
+                      </div>
+                      <div class="hex hex-2 col-sm-6 mobile-9">
+                        <div>
+                          <div class="hexagon withContent hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2 shadow service" >
+                                <p class="innerHex"><span>Служіння</span></p>
+                                <div class="overlay" ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="fourthLevel thirdLevel">
+                          <li><a href="/sluzhinnja/domashni-grupy.html">Домашні групи</a></li>
+                          <li><a href="/sluzhinnja/molodizhne-sluzhinnja.html">Молодіжне служіння</a></li>
+                          <li><a href="/sluzhinnja/dytjache-sluzhinnja.html">Дитяче служіння</a></li>
+                          <li><a href="/sluzhinnja/socialne-sluzhinnja.html">Соціальне служіння</a></li>
+                          <li><a href="/sluzhinnja/sluzhinnja-preobrazhennja-tavor.html">Служіння Преображення “Тавор”</a></li>
+                          <li><a href="/sluzhinnja/molytovnyj-marafon.html">Молитовний марафон</a></li>
+                        </ul>
+                      </div>
+                      <div class="hex hex-2 col-sm-6 empty">
+                        <div>
+                          <div class="hexagon hexagon2 gallery-item">
+                            <div class="hexagon-in1">
+                              <div class="hexagon-in2" >
+                                <div class="overlay" >
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+
+              </header>
+
+
+            <!-- ./header -->
+
+            <div class="content">
+
+              
+            
+              <main class="lines">
+                <div class="container">
+                  <nav class="inlineNav text-center">
+                    <%= raw get_nav_menu('test_menu', 'list-unstyled list-inline text-uppercase') %>
+<!--                      
+                    <ul class="list-unstyled list-inline text-uppercase ">
+                      <li><a href="#">Новини</a></li>
+                      <li><a href="#">Медіатека</a></li>
+                      <li><a href="#">Як знайти бога</a></li>
+                      <li><a href="#">Пастор</a></li>
+                      <li><a href="#">Про церкву</a></li>
+                      <li><a href="#">Служіння</a></li>
+                      <li><a href="#">ПАРТНЕРство</a></li>
+                      <li><a href="#">Форум</a></li>
+                      <li><a href="#">Контакти</a></li>
+                    </ul>
+-->                        
+                  </nav>
+                </div>
+              </main>
+            </div>
+
+            <!-- footer -->
+            <footer>
+                <div class="socialLink text-center">
+                  <ul class="list-inline list-unstyled text-center">
+                    <li><a href="#" class="play"></a></li>
+                    <li><a href="#" class="fb"></a></li>
+                    <li><a href="#" class="vk"></a></li>
+                    <li><a href="#" class="tw"></a></li>
+                  </ul>
+                  <p>2016 Церква “Агапа”</p>
+                </div>
+            </footer>
+            <!-- ./footer -->
+        </div>
+        <!-- ./container -->
+    </div>    
+</body>
+</html>
