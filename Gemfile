@@ -41,14 +41,14 @@ group :development do
   gem 'rails_layout'
 end
 
-group :development do
-  gem 'sqlite3'
-end  
+# group :development do
+#   gem 'sqlite3'
+# end  
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+# group :production do
+#   gem 'pg'
+#   gem 'rails_12factor'
+# end
 
 #################### Camaleon CMS include all gems for plugins and themes #################### 
 require './lib/plugin_routes' 
